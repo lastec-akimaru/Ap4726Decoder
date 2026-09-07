@@ -1,0 +1,112 @@
+Ap4726Decoder Software License Terms
+====================================
+
+Copyright (c) 2026 Tadataka Akimaru.
+All rights reserved.
+
+Article 1 (Scope)
+-----------------
+These License Terms apply to Ap4726Decoder (the "Software").
+The Software includes, without limitation, executable files, libraries, configuration files,
+accompanying documentation, related materials, and any other content provided by the rights holder
+in connection with the Software.
+Unless explicitly subject to separate terms, use of the Software shall be governed by these License Terms.
+
+Article 2 (Permitted Use)
+-------------------------
+Subject to compliance with these License Terms, the user may use the Software solely for the following purposes:
+
+- Internal evaluation
+- Technical verification
+- Trial use
+- Research or study
+
+"Internal evaluation" as used in the preceding paragraph means use within the user's own organization
+for the purpose of confirming the performance, functionality, suitability, or feasibility of adopting the Software,
+and does not include use for customer-facing delivery, commercial operation, production operation,
+external service provision, or other revenue-generating activities.
+
+Article 3 (Prohibited Acts)
+---------------------------
+Without the prior written permission of the rights holder, the user shall not:
+
+- Use the Software for commercial purposes
+- Distribute, redistribute, transfer, lend, sell, sublicense, or otherwise provide the Software to any third party
+- Use the Software, whether for consideration or free of charge, as part of customer-facing products,
+  customer-facing services, service delivery, commissioned development, maintenance or operation services,
+  or any other provision to third parties
+- Use the Software in a production environment, commercial operating environment, or any environment for continuous business operations
+- Modify, adapt, analyze, decompile, disassemble, or otherwise perform similar acts on the Software;
+  provided, however, that this shall not apply to the extent such restriction is not permitted under applicable law
+- Remove or alter any copyright notice, proprietary notice, or license notice displayed on the Software
+
+Article 4 (Commercial Use)
+--------------------------
+Commercial use of the Software requires the prior permission of the rights holder or a separate license agreement.
+
+"Commercial use" under these License Terms includes, without limitation, any use for business purposes,
+including business activities, revenue-generating activities, sales activities, customer support,
+contracted services, product provision, service provision, system integration, operational use,
+or any other use for business-related purposes, regardless of whether sales or consideration are directly obtained.
+
+Examples of commercial use include, without limitation:
+
+- Using the Software as part of a customer-facing product or service
+- Incorporating the Software into a commercial system, business system, or service infrastructure
+- Using the Software, whether for consideration or free of charge, for the purpose of providing services to a third party
+- Providing to a third party any deliverable, system, or service that uses the Software
+- Redistributing the Software as part of any paid offering or commercial offering
+
+For inquiries regarding commercial use, integration, redistribution, modification permission,
+implementation support, related development, or other individual conditions, please contact:
+
+The specific terms of use, scope of permission, supply conditions, fees, and other conditions
+will be provided individually based on the usage form, intended purpose, scale of use,
+scope of provision, required support, and other relevant circumstances.
+
+Contact:
+lastec.akimaru@gmail.com
+
+Article 5 (Ownership of Rights)
+-------------------------------
+All copyrights and any and all other rights relating to the Software belong to the rights holder.
+The Software is licensed, not sold, and only a limited right to use the Software is granted in accordance with these License Terms.
+Except as expressly provided in these License Terms, no rights are transferred or granted to the user.
+
+Article 6 (Third-Party Software)
+--------------------------------
+The Software distribution may include third-party software.
+Such third-party software shall be subject to its respective license terms.
+
+For details, please refer to each file in the `licenses/` directory.
+
+Article 7 (Disclaimer of Warranty)
+----------------------------------
+The Software is provided "as is", and the rights holder makes no warranties of any kind,
+whether express or implied, including without limitation warranties of merchantability,
+fitness for a particular purpose, non-infringement, accuracy, completeness, or usefulness.
+
+Article 8 (Limitation of Liability)
+-----------------------------------
+The rights holder shall not be liable for any damages, losses, costs, claims, or other liabilities
+arising out of or in connection with the use, inability to use, implementation, operation,
+or results of use of the Software, or these License Terms, whether direct, indirect, special,
+consequential, incidental, loss of profits, business interruption, or otherwise,
+regardless of the legal theory, whether in contract, tort, or otherwise.
+
+Article 9 (Termination)
+-----------------------
+If the user violates these License Terms, the rights holder may terminate the license granted under these License Terms
+without prior notice or demand.
+
+Upon termination of the license, the user shall immediately cease using the Software and all copies thereof,
+and shall delete or destroy them as necessary in accordance with the instructions of the rights holder.
+
+Article 10 (Contact)
+--------------------
+For inquiries regarding permission, commercial use, integration, redistribution, modification,
+implementation support, related development, AI feature implementation, peripheral feature development,
+or any other matters relating to the Software, please contact:
+
+Contact:
+lastec.akimaru@gmail.com

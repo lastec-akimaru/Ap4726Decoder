@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  ap4726decoder:
+    image: ap4726decoder:latest
+    container_name: ap4726decoder
+    ports:
+      - "4726:4726"
+    volumes:
+      - ./appconfig.json:/opt/ap4726/runtime/appconfig.json
+      - ./log:/opt/ap4726/runtime/log
+    restart: unless-stopped

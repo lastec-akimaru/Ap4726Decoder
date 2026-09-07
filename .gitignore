@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# venv
+.venv/
+venv/
+
+# logs
+log/
+*.log
+*.det
+
+# model artifacts
+*.onnx
+*.pt
+
+# editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+._.DS_Store
+release/ap4726decoder_latest.tar

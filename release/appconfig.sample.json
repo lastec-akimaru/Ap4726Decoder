@@ -1,0 +1,19 @@
+{
+    "log_level": "INFO",
+    "appVersion": "1.0.0",
+    "logFile": "log/4726.det",
+    "logFormat": "json",
+
+  "decoder": {
+    "rtsp_url": "rtsps://username:password@IP Address:port/stream",
+    "transport": "tcp",
+    "ffmpeg_path": "../bin/ffmpeg",
+    "ffprobe_path": "../bin/ffprobe",
+    "openh264_lib_path": "../lib/libopenh264.so",
+    "max_frames": 300,
+    "read_timeout_ms": 30000
+  },
+  "server": {
+    "port": 4726
+  }
+}

@@ -1,0 +1,74 @@
+FFmpeg / ffprobe License Notice
+===============================
+
+This distribution includes FFmpeg-related binaries based on FFmpeg version 4.4.2.
+
+Included binaries
+-----------------
+This distribution includes:
+
+- ffmpeg
+- ffprobe
+
+Included shared libraries
+-------------------------
+This distribution also includes the following FFmpeg-related shared libraries:
+
+- libavutil.so.56
+- libavcodec.so.58
+- libavformat.so.58
+- libavdevice.so.58
+- libavfilter.so.7
+- libswscale.so.5
+- libswresample.so.3
+
+The included binaries and shared libraries were built with the following configuration:
+
+  --disable-gpl
+  --disable-nonfree
+  --disable-debug
+  --enable-shared
+  --enable-gnutls
+
+Based on the above build configuration, these binaries and shared libraries were built
+without GPL-only components and without nonfree components.
+
+FFmpeg project licensing
+------------------------
+Most files in FFmpeg are licensed under the GNU Lesser General Public License,
+version 2.1 or later (LGPL v2.1+).
+
+Some optional parts of FFmpeg are licensed under the GNU General Public License,
+version 2 or later (GPL v2+), but those parts are not enabled unless explicitly
+selected at build time.
+
+Please refer to the included upstream FFmpeg license documents for the applicable
+license terms.
+
+External libraries
+------------------
+This build enables GnuTLS support.
+
+The GnuTLS runtime library is not included in this distribution directory.
+In the container environment, it is provided separately as a system package
+(for example, Ubuntu package `libgnutls30`).
+
+Other runtime dependencies may also be provided by the target operating system,
+container base image, or execution environment. Those components are subject
+to their own respective license terms.
+
+Source code
+-----------
+The corresponding FFmpeg source code for the version used in this distribution
+can be obtained from the FFmpeg project website:
+
+https://ffmpeg.org/
+
+Version used in this distribution:
+
+- FFmpeg 4.4.2
+
+No warranty
+-----------
+FFmpeg and ffprobe are provided under their respective upstream license terms.
+Please see the included license documents for details.

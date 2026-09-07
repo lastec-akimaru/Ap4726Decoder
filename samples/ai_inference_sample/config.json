@@ -1,0 +1,19 @@
+{
+  "app": {
+    "host": "127.0.0.1",
+    "port": 4726,
+    "width": 1920,
+    "height": 1080,
+    "save_dir": "./ppm_out",
+    "save_first_n": 1,
+    "queue_size": 2,
+    "reconnect_interval_sec": 2.0,
+    "model_path": "./models/yolo11n.onnx"
+  },
+  "ai": {
+    "model_input_size": 640,
+    "score_thresh": 0.25,
+    "nms_thresh": 0.45,
+    "preview_width": 960
+  }
+}

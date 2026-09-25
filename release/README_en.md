@@ -124,7 +124,8 @@ At runtime, place the following in the same directory level as needed.
 ```text
 release/
 ├── appconfig.json
-└── log/
+├── log/
+└── openh264/
 ```
 
 Roles of each file and directory:
@@ -226,6 +227,7 @@ services:
     volumes:
       - ./appconfig.json:/opt/ap4726/runtime/appconfig.json
       - ./log:/opt/ap4726/runtime/log
+      - ./openh264:/opt/ap4726/runtime/lib
     restart: unless-stopped
 ```
 
@@ -255,16 +257,17 @@ The copied appconfig.json has a structure like the following.
 
 ```json
 {
-  "log_level": "INFO",
-  "appVersion": "1.0.0",
-  "logFile": "log/4726.det",
-  "logFormat": "json",
+    "log_level": "INFO",
+    "appVersion": "1.0.0",
+    "logFile": "log/4726.det",
+    "logFormat": "json",
+
   "decoder": {
-    "rtsp_url": "rtsps://username:password@IP Address:port/stream",
+    "rtsp_url": "rtsps://testuser:testpassword@192.168.0.70:8322/mystream",
     "transport": "tcp",
     "ffmpeg_path": "../bin/ffmpeg",
     "ffprobe_path": "../bin/ffprobe",
-    "openh264_lib_path": "../lib/libopenh264.so",
+    "openh264_lib_path": "/opt/ap4726/runtime/lib/libopenh264.so.6",
     "max_frames": 300,
     "read_timeout_ms": 30000
   },
@@ -278,6 +281,7 @@ At a minimum, check and configure the following items according to your environm
 
 - decoder.rtsp_url
 - decoder.transport
+- decoder.openh264_lib_path
 - server.port
 
 Set decoder.rtsp_url to the RTSP or RTSPS URL for your camera.  
@@ -312,12 +316,28 @@ If the settings do not match your environment, Ap4726Decoder will not be able to
 
 For details of the configuration items, refer to 9. Configuration File.
 
-### 6.4 Create the Log Directory
+### 6.4 OpenH264 Library Placement
 
-Create the log directory as the log destination.
+The OpenH264 library itself is not included in this distribution.  
+Before use, create the `openh264/` directory and place `libopenh264.so.6` there.
 
 ```bash
-mkdir -p log
+mkdir -p openh264
+cd openh264
+
+wget http://ciscobinary.openh264.org/libopenh264-2.2.0-linux64.6.so.bz2
+bzip2 -d libopenh264-2.2.0-linux64.6.so.bz2
+mv libopenh264-2.2.0-linux64.6.so libopenh264.so.6
+```
+
+Example directory structure after placement:
+
+```text
+release/
+├── appconfig.json
+├── log/
+└── openh264/
+    └── libopenh264.so.6
 ```
 
 ### 6.5 Prepare the Docker Image

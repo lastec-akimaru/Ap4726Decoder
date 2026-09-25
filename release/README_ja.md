@@ -124,7 +124,8 @@ release/
 ```text
 release/
 ├── appconfig.json
-└── log/
+├── log/
+└── openh264/
 ```
 
 各ファイルの役割:
@@ -226,6 +227,7 @@ services:
     volumes:
       - ./appconfig.json:/opt/ap4726/runtime/appconfig.json
       - ./log:/opt/ap4726/runtime/log
+      - ./openh264:/opt/ap4726/runtime/lib
     restart: unless-stopped
 ```
 
@@ -255,16 +257,17 @@ cp appconfig.sample.json appconfig.json
 
 ```json
 {
-  "log_level": "INFO",
-  "appVersion": "1.0.0",
-  "logFile": "log/4726.det",
-  "logFormat": "json",
+    "log_level": "INFO",
+    "appVersion": "1.0.0",
+    "logFile": "log/4726.det",
+    "logFormat": "json",
+
   "decoder": {
-    "rtsp_url": "rtsps://username:password@IP Address:port/stream",
+    "rtsp_url": "rtsps://testuser:testpassword@192.168.0.70:8322/mystream",
     "transport": "tcp",
     "ffmpeg_path": "../bin/ffmpeg",
     "ffprobe_path": "../bin/ffprobe",
-    "openh264_lib_path": "../lib/libopenh264.so",
+    "openh264_lib_path": "/opt/ap4726/runtime/lib/libopenh264.so.6",
     "max_frames": 300,
     "read_timeout_ms": 30000
   },
@@ -278,6 +281,7 @@ cp appconfig.sample.json appconfig.json
 
 - decoder.rtsp_url
 - decoder.transport
+- decoder.openh264_lib_path
 - server.port
 
 decoder.rtsp_url には、お使いのカメラに合わせた RTSP または RTSPS の URL を設定してください。  
@@ -312,12 +316,28 @@ docker-compose.yml の ports: には、この値と同じポート番号を設�
 
 設定項目の詳細は、9. 設定ファイル を参照してください。
 
-### 6.4 ログディレクトリの作成
+### 6.4 OpenH264 ライブラリの配置
 
-ログ保存先として log ディレクトリを作成します。
+OpenH264 ライブラリ本体は配布物に含まれていません。  
+利用前に `openh264/` ディレクトリを作成し、`libopenh264.so.6` を配置してください。
 
 ```bash
-mkdir -p log
+mkdir -p openh264
+cd openh264
+
+wget http://ciscobinary.openh264.org/libopenh264-2.2.0-linux64.6.so.bz2
+bzip2 -d libopenh264-2.2.0-linux64.6.so.bz2
+mv libopenh264-2.2.0-linux64.6.so libopenh264.so.6
+```
+
+配置後の構成例:
+
+```
+release/
+├── appconfig.json
+├── log/
+└── openh264/
+    └── libopenh264.so.6
 ```
 
 ### 6.5 Docker イメージの準備

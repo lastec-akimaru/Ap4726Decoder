@@ -5,11 +5,11 @@
     "logFormat": "json",
 
   "decoder": {
-    "rtsp_url": "rtsps://username:password@IP Address:port/stream",
+    "rtsp_url": "rtsps://testuser:testpassword@192.168.0.70:8322/mystream",
     "transport": "tcp",
     "ffmpeg_path": "../bin/ffmpeg",
     "ffprobe_path": "../bin/ffprobe",
-    "openh264_lib_path": "../lib/libopenh264.so",
+    "openh264_lib_path": "/opt/ap4726/runtime/lib/libopenh264.so.6",
     "max_frames": 300,
     "read_timeout_ms": 30000
   },

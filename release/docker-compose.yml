@@ -9,4 +9,5 @@ services:
     volumes:
       - ./appconfig.json:/opt/ap4726/runtime/appconfig.json
       - ./log:/opt/ap4726/runtime/log
+      - ./openh264:/opt/ap4726/runtime/lib
     restart: unless-stopped
